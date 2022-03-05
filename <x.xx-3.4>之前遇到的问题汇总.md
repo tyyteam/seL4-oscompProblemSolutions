@@ -7,7 +7,7 @@ https://blog.csdn.net/benben0503/article/details/113865502
 
 可调节分配磁盘大小(需要在虚拟机关闭的情况下)
 
-2. 下载gparted挂载分区
+2. 下载gparted，然后挂载分区
 
 # 磁盘空间不够导致无法进入系统
 启动虚拟机后按shift进入recover mode root模式
@@ -44,5 +44,6 @@ export GIT_SSL_NO_VERIFY=1
 ```
 
 一劳永逸的方法
-https://blog.csdn.net/GooTal/article/details/123196199（qingtao的blog）
+https://blog.csdn.net/GooTal/article/details/123196199
+（qingtao的blog）
 
