@@ -8,6 +8,10 @@ FAQ：[Frequently Asked Questions on seL4 ](https://docs.sel4.systems/projects/s
 
 libsel4 API：[API Reference | seL4 docs](https://docs.sel4.systems/projects/sel4/api-doc.html)。
 
+知乎博客：https://zhuanlan.zhihu.com/p/466424606。
+
+csdn博客：[sel4源码解析（一） - sel4内核对象_Mr0cheng的专栏-CSDN博客_sel4内核](https://blog.csdn.net/Mr0cheng/article/details/104338058)。
+
 ## Porting seL4 to a new platform
 
 根据网页：[Porting seL4 to a new platform ](https://docs.sel4.systems/projects/sel4/porting)。
@@ -86,15 +90,100 @@ ninja
 ./simulate
 ```
 
+vscode跳转到上次位置：`shift+alt+-`
+
 ### seL4 mechanisms tutorials
 
-capabilities：类似于句柄？
+#### helloworld
+
+```
+./simulate --extra-qemu-args="-s -S"
+```
+
+好像不能直接读入两个符号表。启动gdb 读入kernel的符号表：
+
+```
+gdb kernel/kernel.elf
+target remote:1234
+```
+
+获取程序入口信息，设置断点
+
+```
+info files
+```
+
+![image-20220310163019083](images/tmp.assets/image-20220310163019083.png)
+
+设置断点：
+
+```
+b *0x1002ea
+```
+
+另外，保存断点：
+
+```
+save breakpoint ${BPfilename}
+```
+
+下次调试文件时，在指定文件的同时，指定断点文件
+
+```
+gdb ${filename} -x ${BPfilename}
+```
+
+汇编好像用的AT&T语法。[汇编中 $ 和 % 符号的作用-andyhzw-ChinaUnix博客](http://blog.chinaunix.net/uid-28458801-id-3555479.html)。
+
+AT&T语法中，$表示立即数，%表示寄存器。mov $4, %eax，是把4送入eax。
+
+系统入口？
+
+_start: src/arch/x86/64/head.S:269
+
+common_init: src/arch/x86/64/head.S:247
+
+setup_pml4： src/arch/x86/64/head.S:71
+
+huge_page_check： src/arch/x86/64/head.S:53-->setup_pml4-->common_init
+
+enable_x64_mode： src/arch/x86/64/head.S:217-->common_init
+
+syscall_enable：src/arch/x86/64/head.S:206
+
+syscall_check：src/arch/x86/64/head.S:163-->syscall_enable-->common_init-->_start
+
+_start64：src/arch/x86/64/head.S:297
+
+_entry_64：src/arch/x86/64/head.S：335
+
+修改了rax的值，修改了rsp,rbp的值，好像与kernel有关
+
+boot_sys：src/arch/x86/kernel/boot_sys.c:707
+
+try_boot_sys_mbi1：src/arch/x86/kernel/boot_sys.c:517-->try_boot_sys
+
+try_boot_sys：src/arch/x86/kernel/boot_sys.c:719
+
+
+
+
+
+
+
+
+
+
+
+#### capability
+
+Capabilities：类似于句柄？
 
 CNodes：类似于capabilities的数组？
 
 CSlots：类似于CNodes中每个元素指针？
 
-CSpace：属于一个线程的capability地址范围。
+CSpace：属于一个线程的capability地址范围。根任务总是有一个指向CNode的root Capability，可以利用root capability查找对应CSlot中指向的capability。
 
 
 
