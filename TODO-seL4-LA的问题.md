@@ -33,3 +33,44 @@
 
 * SMP需要支持？
 
+
+
+# Cmake问题
+
+* 单独编译的kernel.elf，与sel4test的spike-build下的kernel/kernel.elf，用readelf查看，各个段有区别。
+
+  单独编译rv内核，默认release模式的信息：
+
+  ![image-20220402212922271](images/TODO-seL4-LA%E7%9A%84%E9%97%AE%E9%A2%98.assets/image-20220402212922271.png)
+
+  
+
+  build-spike/kernel/kernel.elf信息，带debug信息
+
+  ![image-20220402213005547](images/TODO-seL4-LA%E7%9A%84%E9%97%AE%E9%A2%98.assets/image-20220402213005547.png)
+
+  qemu运行的elf文件：
+
+  ![image-20220402213346407](images/TODO-seL4-LA%E7%9A%84%E9%97%AE%E9%A2%98.assets/image-20220402213346407.png)
+
+  
+
+  运行image/images/sel4test-driver-image-riscv-spike 信息：从0x80000000起始的各部分物理地址、虚拟地址等。
+
+  ![image-20220402213924995](images/TODO-seL4-LA%E7%9A%84%E9%97%AE%E9%A2%98.assets/image-20220402213924995.png)
+
+* spike-build的kernel/kernel.elf，怎么生成最终的qemu调用的可执行的elf文件。
+* 用龙芯交叉编译器编译。
+
+
+
+
+
+
+
+
+
+
+
+
+
