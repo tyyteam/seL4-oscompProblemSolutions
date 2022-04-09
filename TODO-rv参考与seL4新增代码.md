@@ -303,6 +303,48 @@ ENTRY(_start)//指定输出可执行文件的起始代码段为_start
 
 
 
+# traps.S
+
+## rv的内容
+
+这是内陷处理函数，riscv直接在架构下，arm和x86各放在32和64位文件夹下。
+
+从官方手册没有找到整块的描述写traps.S的思路，打算看看代码。注释见仓库。
+
+[XV6 RISCV源码阅读报告之中断_HarunaP的博客-CSDN博客](https://blog.csdn.net/weixin_43912531/article/details/122138432)
+
+[RISC-V特权等级与Linux内核的启动 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/164394603)
+
+[RISC-V函数调用规范 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/462483036)
+
+[riscv 中断和异常处理 - tycoon3 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dream397/p/15687184.html)
+
+## 龙芯学习
+
+[STM8的线中断和端口中断_塘朗晨光的博客-CSDN博客_stm8引脚中断](https://blog.csdn.net/qq_38963607/article/details/83751304)。
+
+龙芯有3个入口，tlb例外和机器错误例外按照龙芯来，普通例外按照traps.S试试？
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
