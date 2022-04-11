@@ -317,7 +317,9 @@ ENTRY(_start)//指定输出可执行文件的起始代码段为_start
 
 [RISC-V函数调用规范 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/462483036)
 
-[riscv 中断和异常处理 - tycoon3 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dream397/p/15687184.html)
+[riscv 中断和异常处理 - tycoon3 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dream397/p/15687184.html)。
+
+[RISCV: Platform-Level Interrupt Controller(PLIC)_moonllz的博客-CSDN博客](https://blog.csdn.net/moonllz/article/details/52251788)。讲了riscv的local 中断和全局中断
 
 ## 龙芯学习
 
@@ -327,11 +329,19 @@ ENTRY(_start)//指定输出可执行文件的起始代码段为_start
 
 
 
+# initLocalIRQController,initIRQController
+
+## initLocalIRQController
+
+开启了几个中断
 
 
 
+## initIRQController
 
+![image-20220411094925357](images/TODO-rv%E5%8F%82%E8%80%83%E4%B8%8EseL4%E6%96%B0%E5%A2%9E%E4%BB%A3%E7%A0%81.assets/image-20220411094925357.png)
 
+此处设置为了0，但是宏定义都是255？？？？
 
 
 
