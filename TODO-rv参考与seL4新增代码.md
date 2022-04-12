@@ -345,7 +345,49 @@ ENTRY(_start)//指定输出可执行文件的起始代码段为_start
 
 
 
+## 龙芯中断
 
+init/main.c的start_kernel()
+
+```
+local_irq_disable();//关中断
+early_boot_irqs_disabled = true;
+...
+trap_init();//异常初始化
+...
+early_irq_init();//初始化中段描述符，设置一些缺省信息
+init_IRQ();//异常初始化。
+...
+softirq_init();//软中断初始化，软中断->下半部不紧急的中断。软中断是分散初始化的，初始化位置见书68页。
+...
+early_boot_irqs_disabled = false;
+local_irq_enable();//开中断
+```
+
+local_irq_disable跳转到arch/loongarch/include/asm/irqflags.h
+
+```
+static inline void arch_local_irq_disable(void)
+{
+	u32 flags = 0;
+	__asm__ __volatile__(
+		"csrxchg %[val], %[mask], %[reg]\n\t"
+		: [val] "+r" (flags)
+		: [mask] "r" (CSR_CRMD_IE), [reg] "i" (LOONGARCH_CSR_CRMD)
+		: "memory");
+}
+```
+
+
+
+
+
+
+
+arch/loongarch/kernel/traps.c的trap_init()，见红书84
+
+```
+```
 
 
 
