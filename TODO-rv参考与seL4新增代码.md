@@ -353,6 +353,15 @@ init/main.c的start_kernel()
 local_irq_disable();//关中断
 early_boot_irqs_disabled = true;
 ...
+setup_arch(&command_line);//QT 设置三个中断入口
+|-cpu_probe();
+| |-per_cpu_trap_init();//内含很多中断设置
+| | |-setup_vint_size();//QT 设置ECFG寄存器的VS域
+| | |-configure_exception_vector();
+| | |-循环设置handler
+| | |-tlb_init();
+| | | |-setup_tlb_handler();
+...
 trap_init();//异常初始化
 ...
 early_irq_init();//初始化中段描述符，设置一些缺省信息
