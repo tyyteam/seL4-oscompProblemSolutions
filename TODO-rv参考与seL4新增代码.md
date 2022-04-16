@@ -170,8 +170,6 @@ head.S文件：
 
 # common_loongarch.lds
 
-
-
 ## lds指导生成elf文件，elf文件信息查看
 
 riscv的kernel.elf文件查看：`readelf -h kernel.elf`
@@ -364,8 +362,8 @@ setup_arch(&command_line);//QT 设置三个中断入口
 ...
 trap_init();//异常初始化
 ...
-early_irq_init();//初始化中段描述符，设置一些缺省信息
-init_IRQ();//异常初始化。
+early_irq_init();//初始化中段描述符，设置一些缺省信息。与架构关系不大。
+init_IRQ();//异常初始化。在loongarch文件夹下
 ...
 softirq_init();//软中断初始化，软中断->下半部不紧急的中断。软中断是分散初始化的，初始化位置见书68页。
 ...
