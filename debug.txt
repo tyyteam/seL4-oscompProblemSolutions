@@ -2,88 +2,99 @@
 [2/255] Concatenating C files
 [3/255] Generate dummy headers for prune compilation
 [4/255] Generating linker.lds_pp
-[5/255] Generate invocation header gen_headers/arch/api/invocation.h
-[6/255] Generate invocation header gen_headers/arch/api/sel4_invocation.h
-[7/255] Generate syscall invocations
-[8/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/loongarch64/crti.S.obj
-[9/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/loongarch64/crtn.S.obj
-[10/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/arch/loongarch/crt0.S.obj
-[11/255] Creating C input file for preprocessor
-[12/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/arch/loongarch/sel4_crt0.S.obj
+[5/255] Generate invocation header gen_headers/api/invocation.h
+[6/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/loongarch64/crti.S.obj
+[7/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/arch/loongarch/crt0.S.obj
+[8/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/sel4_arch/loongarch64/crtn.S.obj
+[9/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime_crt_obj.dir/crt/arch/loongarch/sel4_crt0.S.obj
+[10/255] Generating ../../../lib/crt0.o, ../../../lib/crti.o, ../../../lib/crtn.o
+[11/255] Using cache musllibc build
+[12/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/zf_log.c.obj
 [13/255] Creating C input file for preprocessor
-[14/255] Building C object libsel4/CMakeFiles/libsel4_shared_types_gen_pbf_temp_lib.dir/libsel4_shared_types_gen_pbf_temp.c.obj
-[15/255] Generating generated/shared_types_gen/shared_types.pbf
-[16/255] Building C object libsel4/CMakeFiles/libsel4_sel4_arch_types_gen_pbf_temp_lib.dir/libsel4_sel4_arch_types_gen_pbf_temp.c.obj
-[17/255] Generate invocation header gen_headers/api/invocation.h
-[18/255] Creating C input file for preprocessor
-[19/255] Generating generated/sel4_arch_shared_types/types.pbf
-[20/255] Generating ../../../lib/crt0.o, ../../../lib/crti.o, ../../../lib/crtn.o
-[21/255] Creating C input file for preprocessor
-[22/255] Building C object kernel/CMakeFiles/kernel_bf_gen_target_1_pbf_temp_lib.dir/kernel_bf_gen_target_1_pbf_temp.c.obj
-[23/255] Generating generated/arch/object/structures.bf.pbf
-[24/255] Using cache musllibc build
-[25/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/zf_log.c.obj
-[26/255] Generating from /home/leon/download/sel4-test/test/libsel4/generated/sel4_arch_shared_types/types.pbf
-[27/255] Building C object kernel/CMakeFiles/kernel_all_pp_prune_wrapper_temp_lib.dir/kernel_all_pp_prune_wrapper_temp.c.obj
-[28/255] Generating kernel_all_pp_prune.c
-[29/255] Generating from /home/leon/download/sel4-test/test/libsel4/generated/shared_types_gen/shared_types.pbf
-[30/255] Generate sel4_client.h
-[31/255] Generating from generated/arch/object/structures.bf.pbf
-[32/255] Creating C input file for preprocessor
-[33/255] Building C object kernel/CMakeFiles/kernel_bf_gen_target_11_pbf_temp_lib.dir/kernel_bf_gen_target_11_pbf_temp.c.obj
-[34/255] Generating generated/sel4/shared_types.bf.pbf
-[35/255] Generate invocation header include/sel4/invocation.h
-[36/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/cbor64.c.obj
-[37/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/debug.c.obj
+[14/255] Creating C input file for preprocessor
+[15/255] Building C object libsel4/CMakeFiles/libsel4_sel4_arch_types_gen_pbf_temp_lib.dir/libsel4_sel4_arch_types_gen_pbf_temp.c.obj
+[16/255] Generate invocation header gen_headers/arch/api/invocation.h
+[17/255] Generating generated/sel4_arch_shared_types/types.pbf
+[18/255] Building C object libsel4/CMakeFiles/libsel4_shared_types_gen_pbf_temp_lib.dir/libsel4_shared_types_gen_pbf_temp.c.obj
+[19/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/cbor64.c.obj
+[20/255] Generating generated/shared_types_gen/shared_types.pbf
+[21/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/debug.c.obj
+[22/255] Generate syscall invocations
+[23/255] Generate invocation header gen_headers/arch/api/sel4_invocation.h
+[24/255] Creating C input file for preprocessor
+[25/255] Generating from /home/leon/download/sel4-test/test/libsel4/generated/sel4_arch_shared_types/types.pbf
+[26/255] Creating C input file for preprocessor
+[27/255] Generating from /home/leon/download/sel4-test/test/libsel4/generated/shared_types_gen/shared_types.pbf
+[28/255] Building C object kernel/CMakeFiles/kernel_bf_gen_target_1_pbf_temp_lib.dir/kernel_bf_gen_target_1_pbf_temp.c.obj
+[29/255] Building C object kernel/CMakeFiles/kernel_all_pp_prune_wrapper_temp_lib.dir/kernel_all_pp_prune_wrapper_temp.c.obj
+[30/255] Generating generated/arch/object/structures.bf.pbf
+[31/255] Generating kernel_all_pp_prune.c
+[32/255] Generate sel4_client.h
+[33/255] Generating from generated/arch/object/structures.bf.pbf
+[34/255] Creating C input file for preprocessor
+[35/255] Building C object kernel/CMakeFiles/kernel_bf_gen_target_11_pbf_temp_lib.dir/kernel_bf_gen_target_11_pbf_temp.c.obj
+[36/255] Generating generated/sel4/shared_types.bf.pbf
+[37/255] Generate invocation header arch_include/loongarch/sel4/arch/invocation.h
 [38/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/list.c.obj
 [39/255] Building C object apps/sel4test-driver/util_libs/libutils/CMakeFiles/utils.dir/src/xml.c.obj
-[40/255] Generating from generated/sel4/shared_types.bf.pbf
-[41/255] Linking C static library apps/sel4test-driver/util_libs/libutils/libutils.a
-[42/255] Creating C input file for preprocessor
-[43/255] Creating C input file for preprocessor
-[44/255] Generate invocation header arch_include/loongarch/sel4/arch/invocation.h
-[45/255] Building C object kernel/CMakeFiles/linker_ld_wrapper_temp_lib.dir/linker_ld_wrapper_temp.c.obj
-[46/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/fdt.c.obj
-[47/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/io.c.obj
-[48/255] Generating linker.lds_pp
-[49/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/local_time_manager.c.obj
-[50/255] Generate invocation header sel4_arch_include/loongarch64/sel4/sel4_arch/invocation.h
-[51/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/3A5000/chardev.c.obj
-[52/255] Building C object kernel/CMakeFiles/kernel_i_wrapper_temp_lib.dir/kernel_all_copy.c.obj
-[53/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/3A5000/serial.c.obj
-[54/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/serial.c.obj
-[55/255] Generate syscall.h
-[56/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/tqueue.c.obj
-[57/255] Generating kernel_all.i
-[58/255] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf.c.obj
-[59/255] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf32.c.obj
-[60/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/loongarch64/crtn.S.obj
-[61/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/loongarch64/crti.S.obj
-[62/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/arch/loongarch/crt0.S.obj
-[63/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/arch/loongarch/sel4_crt0.S.obj
-[64/255] Generating circular_includes_valid
-[65/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj
-FAILED: apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj 
-/usr/bin/ccache /opt/cross-tools/bin/loongarch64-unknown-linux-gnu-gcc --sysroot=/home/leon/download/sel4-test/test  -I/home/leon/download/sel4-test/projects/sel4runtime/src -I/home/leon/download/sel4-test/projects/sel4runtime/src/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/src/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/src/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/projects/sel4runtime/include -I/home/leon/download/sel4-test/projects/sel4runtime/include/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/include/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/include/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/include -I/home/leon/download/sel4-test/kernel/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/kernel/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/sel4_plat_include/3A5000 -I/home/leon/download/sel4-test/kernel/libsel4/mode_include/64 -I/home/leon/download/sel4-test/test/libsel4/include -I/home/leon/download/sel4-test/test/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/test/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/test/libsel4/autoconf -I/home/leon/download/sel4-test/test/kernel/gen_config -I/home/leon/download/sel4-test/test/libsel4/gen_config -I/home/leon/download/sel4-test/test/apps/sel4test-driver/sel4runtime/gen_config -D__KERNEL_64__ -march=loongarch64 -mabi=lp64d -mtune=loongarch64 -g -nostdinc -fno-pic -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -ftls-model=local-exec -std=gnu11 -MD -MT apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj -MF apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj.d -o apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj -c /home/leon/download/sel4-test/projects/sel4runtime/src/crt1.c
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/include/sel4runtime.h:13,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/crt1.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:41:21: 错误：‘seL4_LOONGARCH_VMAttributes’ undeclared here (not in a function); did you mean ‘seL4_RISCV_VMAttributes’?
-   41 | assert_size_correct(seL4_LOONGARCH_VMAttributes, 8);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:20:25: 附注：in definition of macro ‘assert_size_correct’
-   20 |                 (sizeof(type) == expected_bytes) ? 1 : -1]
-      |                         ^~~~
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/include/sel4runtime.h:13,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/crt1.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:112:115: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  112 | seL4_LOONGARCH_PageTable_Map(seL4_LOONGARCH_PageTable _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:237:130: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  237 | seL4_LOONGARCH_Page_Map(seL4_LOONGARCH_Page _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_CapRights_t rights, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-[66/255] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj
+[40/255] Linking C static library apps/sel4test-driver/util_libs/libutils/libutils.a
+[41/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/fdt.c.obj
+[42/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/io.c.obj
+[43/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/local_time_manager.c.obj
+[44/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/3A5000/chardev.c.obj
+[45/255] Generate invocation header include/sel4/invocation.h
+[46/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/serial.c.obj
+[47/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/plat/3A5000/serial.c.obj
+[48/255] Building C object apps/sel4test-driver/util_libs/libplatsupport/CMakeFiles/platsupport.dir/src/tqueue.c.obj
+[49/255] Generating from generated/sel4/shared_types.bf.pbf
+[50/255] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf.c.obj
+[51/255] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf32.c.obj
+[52/255] Creating C input file for preprocessor
+[53/255] Creating C input file for preprocessor
+[54/255] Building C object apps/sel4test-driver/util_libs/libelf/CMakeFiles/elf.dir/src/elf64.c.obj
+[55/255] Generate invocation header sel4_arch_include/loongarch64/sel4/sel4_arch/invocation.h
+[56/255] Building C object kernel/CMakeFiles/linker_ld_wrapper_temp_lib.dir/linker_ld_wrapper_temp.c.obj
+[57/255] Linking C static library apps/sel4test-driver/util_libs/libelf/libelf.a
+[58/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt.c.obj
+[59/255] Building C object apps/sel4test-driver/util_libs/libcpio/CMakeFiles/cpio.dir/src/cpio.c.obj
+[60/255] Generating linker.lds_pp
+[61/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_addresses.c.obj
+[62/255] Generate syscall.h
+[63/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_empty_tree.c.obj
+[64/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_overlay.c.obj
+[65/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/loongarch64/crtn.S.obj
+[66/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/sel4_arch/loongarch64/crti.S.obj
+[67/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/arch/loongarch/sel4_crt0.S.obj
+[68/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/crt1.c.obj
+[69/255] Linking C static library apps/sel4test-driver/util_libs/libcpio/libcpio.a
+[70/255] Building ASM object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/crt/arch/loongarch/crt0.S.obj
+[71/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj
+[72/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj
+[73/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/init.c.obj
+[74/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memcpy.c.obj
+[75/255] Building C object kernel/CMakeFiles/kernel_i_wrapper_temp_lib.dir/kernel_all_copy.c.obj
+[76/255] Generating kernel_all.i
+[77/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/vsyscall.c.obj
+[78/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_ro.c.obj
+[79/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_rw.c.obj
+[80/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/memset.c.obj
+[81/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_strerror.c.obj
+[82/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_sw.c.obj
+[83/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdt_wip.c.obj
+[84/255] Building C object apps/sel4test-driver/util_libs/libfdt/CMakeFiles/fdt.dir/fdtget.c.obj
+[85/255] Building C object libsel4/CMakeFiles/sel4.dir/src/sel4_bootinfo.c.obj
+[86/255] Linking C static library apps/sel4test-driver/util_libs/libfdt/libfdt.a
+[87/255] Linking C static library apps/sel4test-driver/util_libs/libplatsupport/libplatsupport.a
+[88/255] Linking C static library libsel4/libsel4.a
+[89/255] Generating circular_includes_valid
+[90/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj
+FAILED: apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj 
+/usr/bin/ccache /opt/cross-tools/bin/loongarch64-unknown-linux-gnu-gcc --sysroot=/home/leon/download/sel4-test/test  -I/home/leon/download/sel4-test/projects/sel4runtime/src -I/home/leon/download/sel4-test/projects/sel4runtime/src/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/src/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/src/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/projects/sel4runtime/include -I/home/leon/download/sel4-test/projects/sel4runtime/include/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/include/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/include/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/include -I/home/leon/download/sel4-test/kernel/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/kernel/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/sel4_plat_include/3A5000 -I/home/leon/download/sel4-test/kernel/libsel4/mode_include/64 -I/home/leon/download/sel4-test/test/libsel4/include -I/home/leon/download/sel4-test/test/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/test/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/test/libsel4/autoconf -I/home/leon/download/sel4-test/test/kernel/gen_config -I/home/leon/download/sel4-test/test/libsel4/gen_config -I/home/leon/download/sel4-test/test/apps/sel4test-driver/sel4runtime/gen_config -D__KERNEL_64__ -march=loongarch64 -mabi=lp64d -mtune=loongarch64 -g -nostdinc -fno-pic -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -ftls-model=local-exec -std=gnu11 -MD -MT apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj -MF apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj.d -o apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj -c /home/leon/download/sel4-test/projects/sel4runtime/src/env.c
+/tmp/ccGnkjHK.s: Assembler messages:
+/tmp/ccGnkjHK.s:90: 错误：no match insn: ecall	
+/tmp/ccGnkjHK.s:235: 错误：no match insn: or	tp,$r12,x0
+[91/255] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/alloc.c.obj
+[92/255] Building ASM object kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj
 FAILED: kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj 
 /usr/bin/ccache /opt/cross-tools/bin/loongarch64-unknown-linux-gnu-gcc --sysroot=/home/leon/download/sel4-test/test  -I/home/leon/download/sel4-test/kernel/include/plat/default -I/home/leon/download/sel4-test/kernel/include -I/home/leon/download/sel4-test/kernel/include/64 -I/home/leon/download/sel4-test/kernel/include/arch/loongarch -I/home/leon/download/sel4-test/kernel/include/arch/loongarch/arch/64 -I/home/leon/download/sel4-test/kernel/include/plat/3A5000 -I/home/leon/download/sel4-test/kernel/include/plat/3A5000/plat/64 -I/home/leon/download/sel4-test/kernel/libsel4/include -I/home/leon/download/sel4-test/kernel/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/kernel/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/sel4_plat_include/3A5000 -I/home/leon/download/sel4-test/kernel/libsel4/mode_include/64 -I/home/leon/download/sel4-test/test/kernel/gen_config -I/home/leon/download/sel4-test/test/kernel/autoconf -I/home/leon/download/sel4-test/test/kernel/gen_headers -I/home/leon/download/sel4-test/test/kernel/generated -D__KERNEL_64__ -march=loongarch64 -mabi=lp64d -mtune=loongarch64 -O2 -g -DNDEBUG -std=c99 -Wall -Werror -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wundef -Wpointer-arith -Wno-nonnull -nostdinc -ffreestanding -fno-stack-protector -fno-asynchronous-unwind-tables -fno-common -O2 -nostdlib -fno-pic -fno-pie -DDEBUG -g -ggdb -MD -MT kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj -MF kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj.d -o kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj -c /home/leon/download/sel4-test/kernel/src/arch/loongarch/head.S
 /home/leon/download/sel4-test/kernel/src/arch/loongarch/head.S: Assembler messages:
@@ -120,63 +131,6 @@ FAILED: kernel/CMakeFiles/kernel.elf.dir/src/arch/loongarch/head.S.obj
 /home/leon/download/sel4-test/kernel/src/arch/loongarch/head.S:60: 错误：no match insn: ptr_addu	sp,sp,tp
 /home/leon/download/sel4-test/kernel/src/arch/loongarch/head.S:61: 错误：no match insn: set_saved_sp	sp,t0,t1
 /home/leon/download/sel4-test/kernel/src/arch/loongarch/head.S:62: 错误：no match insn: ptr_addiu	sp,sp,-4*SZREG
-[67/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj
-FAILED: apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj 
-/usr/bin/ccache /opt/cross-tools/bin/loongarch64-unknown-linux-gnu-gcc --sysroot=/home/leon/download/sel4-test/test  -I/home/leon/download/sel4-test/projects/sel4runtime/src -I/home/leon/download/sel4-test/projects/sel4runtime/src/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/src/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/src/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/projects/sel4runtime/include -I/home/leon/download/sel4-test/projects/sel4runtime/include/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/include/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/include/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/include -I/home/leon/download/sel4-test/kernel/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/kernel/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/sel4_plat_include/3A5000 -I/home/leon/download/sel4-test/kernel/libsel4/mode_include/64 -I/home/leon/download/sel4-test/test/libsel4/include -I/home/leon/download/sel4-test/test/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/test/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/test/libsel4/autoconf -I/home/leon/download/sel4-test/test/kernel/gen_config -I/home/leon/download/sel4-test/test/libsel4/gen_config -I/home/leon/download/sel4-test/test/apps/sel4test-driver/sel4runtime/gen_config -D__KERNEL_64__ -march=loongarch64 -mabi=lp64d -mtune=loongarch64 -g -nostdinc -fno-pic -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -ftls-model=local-exec -std=gnu11 -MD -MT apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj -MF apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj.d -o apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/env.c.obj -c /home/leon/download/sel4-test/projects/sel4runtime/src/env.c
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/include/sel4runtime.h:13,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/env.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:41:21: 错误：‘seL4_LOONGARCH_VMAttributes’ undeclared here (not in a function); did you mean ‘seL4_RISCV_VMAttributes’?
-   41 | assert_size_correct(seL4_LOONGARCH_VMAttributes, 8);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:20:25: 附注：in definition of macro ‘assert_size_correct’
-   20 |                 (sizeof(type) == expected_bytes) ? 1 : -1]
-      |                         ^~~~
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/include/sel4runtime.h:13,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/env.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:112:115: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  112 | seL4_LOONGARCH_PageTable_Map(seL4_LOONGARCH_PageTable _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:237:130: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  237 | seL4_LOONGARCH_Page_Map(seL4_LOONGARCH_Page _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_CapRights_t rights, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-[68/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj
-FAILED: apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj 
-/usr/bin/ccache /opt/cross-tools/bin/loongarch64-unknown-linux-gnu-gcc --sysroot=/home/leon/download/sel4-test/test  -I/home/leon/download/sel4-test/projects/sel4runtime/src -I/home/leon/download/sel4-test/projects/sel4runtime/src/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/src/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/src/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/projects/sel4runtime/include -I/home/leon/download/sel4-test/projects/sel4runtime/include/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/include/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/include/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/include -I/home/leon/download/sel4-test/kernel/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/kernel/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/sel4_plat_include/3A5000 -I/home/leon/download/sel4-test/kernel/libsel4/mode_include/64 -I/home/leon/download/sel4-test/test/libsel4/include -I/home/leon/download/sel4-test/test/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/test/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/test/libsel4/autoconf -I/home/leon/download/sel4-test/test/kernel/gen_config -I/home/leon/download/sel4-test/test/libsel4/gen_config -I/home/leon/download/sel4-test/test/apps/sel4test-driver/sel4runtime/gen_config -D__KERNEL_64__ -march=loongarch64 -mabi=lp64d -mtune=loongarch64 -g -nostdinc -fno-pic -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -ftls-model=local-exec -std=gnu11 -MD -MT apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj -MF apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj.d -o apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start_root.c.obj -c /home/leon/download/sel4-test/projects/sel4runtime/src/start_root.c
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/start_root.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:41:21: 错误：‘seL4_LOONGARCH_VMAttributes’ undeclared here (not in a function); did you mean ‘seL4_RISCV_VMAttributes’?
-   41 | assert_size_correct(seL4_LOONGARCH_VMAttributes, 8);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:20:25: 附注：in definition of macro ‘assert_size_correct’
-   20 |                 (sizeof(type) == expected_bytes) ? 1 : -1]
-      |                         ^~~~
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/start_root.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:112:115: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  112 | seL4_LOONGARCH_PageTable_Map(seL4_LOONGARCH_PageTable _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:237:130: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  237 | seL4_LOONGARCH_Page_Map(seL4_LOONGARCH_Page _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_CapRights_t rights, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-[69/255] Building C object apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj
-FAILED: apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj 
-/usr/bin/ccache /opt/cross-tools/bin/loongarch64-unknown-linux-gnu-gcc --sysroot=/home/leon/download/sel4-test/test  -I/home/leon/download/sel4-test/projects/sel4runtime/src -I/home/leon/download/sel4-test/projects/sel4runtime/src/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/src/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/src/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/projects/sel4runtime/include -I/home/leon/download/sel4-test/projects/sel4runtime/include/mode/64 -I/home/leon/download/sel4-test/projects/sel4runtime/include/arch/loongarch -I/home/leon/download/sel4-test/projects/sel4runtime/include/sel4_arch/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/include -I/home/leon/download/sel4-test/kernel/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/kernel/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/kernel/libsel4/sel4_plat_include/3A5000 -I/home/leon/download/sel4-test/kernel/libsel4/mode_include/64 -I/home/leon/download/sel4-test/test/libsel4/include -I/home/leon/download/sel4-test/test/libsel4/arch_include/loongarch -I/home/leon/download/sel4-test/test/libsel4/sel4_arch_include/loongarch64 -I/home/leon/download/sel4-test/test/libsel4/autoconf -I/home/leon/download/sel4-test/test/kernel/gen_config -I/home/leon/download/sel4-test/test/libsel4/gen_config -I/home/leon/download/sel4-test/test/apps/sel4test-driver/sel4runtime/gen_config -D__KERNEL_64__ -march=loongarch64 -mabi=lp64d -mtune=loongarch64 -g -nostdinc -fno-pic -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -ftls-model=local-exec -std=gnu11 -MD -MT apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj -MF apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj.d -o apps/sel4test-driver/sel4runtime/CMakeFiles/sel4runtime.dir/src/start.c.obj -c /home/leon/download/sel4-test/projects/sel4runtime/src/start.c
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/start.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:41:21: 错误：‘seL4_LOONGARCH_VMAttributes’ undeclared here (not in a function); did you mean ‘seL4_RISCV_VMAttributes’?
-   41 | assert_size_correct(seL4_LOONGARCH_VMAttributes, 8);
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:20:25: 附注：in definition of macro ‘assert_size_correct’
-   20 |                 (sizeof(type) == expected_bytes) ? 1 : -1]
-      |                         ^~~~
-In file included from /home/leon/download/sel4-test/kernel/libsel4/include/sel4/sel4.h:16,
-                 from /home/leon/download/sel4-test/projects/sel4runtime/src/start.c:6:
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:112:115: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  112 | seL4_LOONGARCH_PageTable_Map(seL4_LOONGARCH_PageTable _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/leon/download/sel4-test/test/libsel4/include/interfaces/sel4_client.h:237:130: 错误：expected declaration specifiers or ‘...’ before ‘seL4_LOONGARCH_VMAttributes’
-  237 | seL4_LOONGARCH_Page_Map(seL4_LOONGARCH_Page _service, seL4_LOONGARCH_PageTable vspace, seL4_Word vaddr, seL4_CapRights_t rights, seL4_LOONGARCH_VMAttributes attr)
-      |                                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[93/255] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/backtrace.c.obj
+[94/255] Building C object apps/sel4test-driver/seL4_libs/libsel4debug/CMakeFiles/sel4debug.dir/src/bootinfo.c.obj
 ninja: build stopped: subcommand failed.
