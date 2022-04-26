@@ -2,7 +2,7 @@
 
 ## initLocalIRQController
 
-开启了几个中断
+开启了定时器中断和外部中断，软件中断因为smp未开启。
 
 
 
@@ -11,6 +11,42 @@
 ![image-20220411094925357](images/TODO-4.19-%E6%96%B0%E5%A2%9E%E4%B8%AD%E6%96%AD%E9%83%A8%E5%88%86.assets/image-20220411094925357.png)
 
 此处设置为了0，但是宏定义都是255？？？？
+
+plic，平台级中断控制器。
+
+
+
+## init_irq
+
+maxIRQ在src/arch/riscv/platform_gen.h.in
+
+疑惑cap_irq_control_cap_new的定义从哪里来
+
+
+
+## platform_gen.h.in
+
+如何生成？
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,23 +94,13 @@ static inline void arch_local_irq_disable(void)
 
 
 
-
-
-
-
 arch/loongarch/kernel/traps.c的trap_init()，见红书84
 
-```
-
-```
 
 
+关于外设中断：[early_irq_init_wuye110的博客-CSDN博客_early_irq_init](https://blog.csdn.net/wuye110/article/details/78556622)。
 
-
-
-
-
-
+[Linux 中断 —— GIC (数据结构 irq_domain/irq_desc/irq_data/irq_chip/irqaction)_爱洋葱的博客-CSDN博客_irq_desc](https://stephenzhou.blog.csdn.net/article/details/90648475?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_paycolumn_v3&utm_relevant_index=2)。
 
 
 

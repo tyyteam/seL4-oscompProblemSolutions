@@ -327,3 +327,25 @@ ENTRY(_start)//指定输出可执行文件的起始代码段为_start
 
 
 
+# 类型
+
+在include/stdint.h中定义了基本类型。
+
+include/basic_types.h也有
+
+
+
+
+
+# log函数
+
+copy 不现实，采用硬编码
+
+
+
+
+
+
+
+
+
