@@ -25,10 +25,10 @@ chmod u+x sel4test-set_and_pull.sh
 
 你可以直接在命令行中使用`git push`命令。
 
-也可以参考雷哥手册：[sel4-test dev仓库设置.md at leiyang](https://github.com/tyyteam/seL4-oscompProblemSolutions/blob/leiyang/04.11 sel4-test dev仓库设置.md)。
+也可以参考雷哥手册：https://github.com/tyyteam/seL4-oscompProblemSolutions/blob/leiyang/04.11
 
 ## 构建loongarch项目
 
 参考雷哥手册：
 
-[sel4-test dev仓库设置.md at leiyang](https://github.com/tyyteam/seL4-oscompProblemSolutions/blob/leiyang/04.11 sel4-test dev仓库设置.md)。
+https://github.com/tyyteam/seL4-oscompProblemSolutions/blob/leiyang/04.11
