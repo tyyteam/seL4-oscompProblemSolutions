@@ -57,6 +57,58 @@
 
 * 注意riscv的s0和龙芯s9寄存器的用法。
 
+# 5.2
+
+添加projects/sel4test/apps/sel4test-tests/src/tests/faults.c龙芯支持
+
+确认龙芯宏的精确写法：#ifdef CONFIG_ARCH_LOONGARCH
+
+替换riscv的特殊指令：
+
+* riscv的rdcycle指令，
+* riscv的sscratch，用SAVEn
+* sstatus，考虑中断使能。
+
+添加projects/util_libs/libplatsupport/src/arch/loongarch/irqchip/extio.c
+
+修改sbi.h，暂时让它不报指令错误
+
+修好了fw_arg的问题。
+
+修复找不到local_flush_icache_range
+
+genex.S问题 各种符号找不到
+
+* 解决kernelsp找不到
+* 解决do_vint找不到
+* 解决找不到cache_parity_error
+* 解决找不到do_ade
+* 解决找不到do_ale
+* 解决找不到do_bp
+* 解决找不到do_fpe
+* 解决找不到do_fpu
+* 解决找不到do_lsx
+* 解决找不到do_lasx
+* 解决找不到do_lbt
+* 解决找不到do_ri
+* 解决找不到do_watch
+* 解决找不到do_reserved
+* 解决找不到handle_syscall
+
+tlbex.S问题 各种符号找不到
+
+* do_page_fault
+* swapper_pg_dir
+
+# 5.3
+
+crt0.S
+
+可以编译出来了
+
+# TODO:
+
+* 
 
 
 
@@ -64,6 +116,13 @@
 
 
 
+
+
+
+
+asm volatile语法
+
+![image-20220502112337320](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220502112337320.png)
 
 
 
