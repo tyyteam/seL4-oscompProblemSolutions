@@ -1,0 +1,47 @@
+/dts-v1/;
+
+/ {
+	#size-cells = <0x02>;
+	#address-cells = <0x02>;
+	compatible = "linux,dummy-loongson3";
+
+	pcie@20000000 {
+		ranges = <0x1000000 0x00 0x4000 0x00 0x18004000 0x00 0xc000 0x2000000 0x00 0x40000000 0x00 0x40000000 0x00 0x40000000>;
+		reg = <0x00 0x20000000 0x00 0x8000000>;
+		dma-coherent;
+		bus-range = <0x00 0x7f>;
+		linux,pci-domain = <0x00>;
+		#size-cells = <0x02>;
+		#address-cells = <0x03>;
+		device_type = "pci";
+		compatible = "pci-host-ecam-generic";
+	};
+
+	fw_cfg@1e020000 {
+		dma-coherent;
+		reg = <0x00 0x1e020000 0x00 0x08>;
+		compatible = "qemu,fw-cfg-mmio";
+	};
+
+	cpus {
+		#size-cells = <0x00>;
+		#address-cells = <0x01>;
+
+		cpu-map {
+
+			socket0 {
+
+				core0 {
+					cpu = <0x8000>;
+				};
+			};
+		};
+
+		cpu@0 {
+			phandle = <0x8000>;
+			reg = <0x00>;
+			compatible = "loongarch,Loongson-3A5000";
+			device_type = "cpu";
+		};
+	};
+};
