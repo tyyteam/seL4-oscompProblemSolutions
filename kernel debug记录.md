@@ -1,0 +1,66 @@
+- 修改runtime下的几个crt
+- 修改mus中的crt
+- 修改asm/regdef.h相关定义为loongarch的
+- inclue了asm下头文件路径前缀为arch/asm/\**.h
+- 增加asm/addrspace.h
+- 初步修改common_loongarch.lds
+- traps.S全部注释掉
+- head.S修改完毕
+- arch/machine.h的local_irq_disable函数中__uint32_t改为uint32_t
+- arch/machine.h 增加getRestartPC和setNextPC的声明
+- 去掉arch/kernel/traps.h各个asmlinkage
+- arch/kernel/traps.h增加arch_c_entry_hook和arch_c_exit_hook
+- arch/loongarch/c_traps.c缺少声明，arch/kernel/traps.h增加c_handle_fastpath_reply_recv c_handle_fastpath_call c_handle_syscall c_handle_interrupt  c_handle_exception restore_user_context handle_exception的声明
+- arch/machine/tlb.h init_tlb函数声明之前忘记返回值了，补上
+- arch/machine/tlb.h tlb_flush相关从linux拷贝过来，涉及linux定义的平台无关数据结构，且这个函数用不着，删去
+- kernel/src/arch/loongarch/c_traps.c中c_handle_exception全部注释掉
+- boot.c->init_cpu中的for循环缺了int，补上
+- machine.h中增加initTimer、initLocalIRQController、initIRQController的函数声明
+- machine.h中增加trap_init();的函数声明
+- vspace.c的enum PTE_TYPE有语法错误，修正
+- vspace.c的map_kernel_frame暂时先注释掉
+- vspace.c的pte_next函数后一个枚举类型参数没加enum，补上
+- vsapce.c的map_kernel_window的kernel_level3_pageTable->kernel_pt
+- vspace.c的pte_next、map_it_frame_cap、unmapPage、unmapPageTable中的sfence函数暂时注释掉，这是rv的虚拟内存屏障指令，TODO
+- vspace.c的arch_get_n_paging、create_it_address_space、copyGlobalMappings、unmapPageTable中rv相关宏定义改为la的
+- vspace.c的activate_kernel_vspace、copyGlobalMappings、setVMRoot中kernel_root_pageTable->kernel_level0_pd
+- vspace.c中handleVMFault、deleteASID、decodeRISCVPageTableInvocation、decodeRISCVFrameInvocation、decodeRISCVMMUInvocation、performPageTableInvocationMap、performPageTableInvocationUnmap、performPageGetAddress、updatePTE、performPageInvocationUnmap暂时注释掉
+- vspace.c中copyGlobalMappings的pte_t相关类型改为word_t（因为龙芯除了末级页表，其他页目录表项都是直接存放的地址）
+- arch/kernel/vspace.h中copyGlobalMappingsc参数类型改为word_t
+- vspace.c中performASIDPoolInvocation的regionBase类型改为word_t
+- arch/object/structures.h #define PTE_PTR(r) ((word_t *)(r)) pte_t改为word_t
+- vspace.c中getPPtrFromHWPTE、performASIDPoolInvocation、setVMRoot、Arch_userStackTrace、benchmark_arch_map_logBuffer暂时先注释掉
+- arch/object/structures.h中增加对pde相关的定义（区分页目录项和末级页表项）
+- kernel/src/arch/loongarch/kernel/vspace.c的create_it_address_space调用copyGlobalMappings改为使用PDE_PTR
+- vspace.h/.c中lookupPTSlot函数第一个参数类型pte_t->pde_t
+- vspace.c中map_it_frame_cap的lvl1pt类型pte_t->pde_t，相关PTE_PTR->PDE_PTR
+- vspace.c中lookupPTSlot增加强制类型转换ret.ptSlot = (pte_t *)(pt + ((vptr >> ret.ptBitsLeft) & MASK(PT_INDEX_BITS)));
+- vspace.c中getPPtrFromHWPTE取消注释
+- vspace.c的lookupPTSlot改完（这个函数用于寻找给定的虚拟地址对应的末级页表项）
+- vspace.h中findVSpaceForASID_ret的*vspace_root字段类型改为pde_t
+- vspace.c中findVSpaceForASID的*vspace_root类型改为pde_t
+- vspace.c中的unmapPageTable注释
+- capdl.c注释掉
+- asm/fpregdef.h替换为la的，修改其中include的路径
+- machine.h中pwch相关宏定义修正
+- machine.h增加setIRQTrigger函数声明
+- machine.h中set_exception_vector->configure_exception_vector
+- hardware.c增加#include <arch/machine/cache.h>
+- kernel/src/arch/loongarch/object/objecttype.c中的Arch_finaliseCap暂时先注释掉
+- kernel/libsel4/sel4_arch_include/loongarch64/sel4/sel4_arch/constants.h的seL4_ASIDPoolIndexBits改为11，seL4_ASIDPoolBits改为14
+- machine.h增加static inline void clearMemory(void *ptr, unsigned int bits)
+- kernel/include/arch/loongarch/arch/fastpath/fastpath.h中switchToThread_fp的第三个参数类型pte_t->pde_t
+- vspace.c注释掉makeUserPTE、performASIDControlInvocation、RISCVGetWriteFromVMRights、RISCVGetReadFromVMRights
+- structures.bf加入block pde，去掉structure.h中的typedef word_t pde_t
+- bf中的block pde去掉，structures.h中重新增加typedef word_t pde_t
+- fastpath.h中switchToThread_fp的stored_hw_asid.word[0]改为switchToThread_fp
+- vspace.c的findVSpaceForASID、unmapPage、pte_pte_invalid_new注释掉
+- fastpath.c增加#ifdef CONFIG_ARCH_LOONGARCH
+- sret->ertn
+- seL4test/kernel/src/arch/loongarch/c_traps.c第52行sc.w $zero, $zero, $t0\n改为
+- thread.c Arch_switchToIdleThread Arch_switchToThread注释
+- 修改kernel页表维度
+- 注释objecttype.c的Arch_decodeInvocation、Arch_decodeInvocation
+- 注释kernel/src/kernel/faulthandler.c
+- seL4test/tools/seL4/elfloader-tool/src/arch-loongarch/boot.c的abort中wfi->idle 0
+- seL4test/tools/seL4/elfloader-tool/src/arch-loongarch/boot.c中sence_vma和ifence改为loongarch的汇编
