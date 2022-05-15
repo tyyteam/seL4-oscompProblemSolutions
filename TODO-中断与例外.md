@@ -1,4 +1,4 @@
-# seL4的中断
+# seL4-rv的中断
 
 ## initLocalIRQController
 
@@ -8,7 +8,7 @@
 
 ## initIRQController
 
-![image-20220411094925357](images/TODO-4.19-%E6%96%B0%E5%A2%9E%E4%B8%AD%E6%96%AD%E9%83%A8%E5%88%86.assets/image-20220411094925357.png)
+![image-20220411094925357](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220411094925357.png)
 
 此处设置为了0，但是宏定义都是255？？？？
 
@@ -27,22 +27,6 @@ maxIRQ在src/arch/riscv/platform_gen.h.in
 ## platform_gen.h.in
 
 如何生成？
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -104,11 +88,27 @@ arch/loongarch/kernel/traps.c的trap_init()，见红书84
 
 
 
+# traps.S
 
+## rv的内容
 
+这是内陷处理函数，riscv直接在架构下，arm和x86各放在32和64位文件夹下。
 
+从官方手册没有找到整块的描述写traps.S的思路，打算看看代码。注释见仓库。
 
+[XV6 RISCV源码阅读报告之中断_HarunaP的博客-CSDN博客](https://blog.csdn.net/weixin_43912531/article/details/122138432)
 
+[RISC-V特权等级与Linux内核的启动 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/164394603)
 
+[RISC-V函数调用规范 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/462483036)
 
+[riscv 中断和异常处理 - tycoon3 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dream397/p/15687184.html)。
+
+[RISCV: Platform-Level Interrupt Controller(PLIC)_moonllz的博客-CSDN博客](https://blog.csdn.net/moonllz/article/details/52251788)。讲了riscv的local 中断和全局中断
+
+## 龙芯学习
+
+[STM8的线中断和端口中断_塘朗晨光的博客-CSDN博客_stm8引脚中断](https://blog.csdn.net/qq_38963607/article/details/83751304)。
+
+龙芯有3个入口，tlb例外和机器错误例外按照龙芯来，普通例外按照traps.S试试？
 
