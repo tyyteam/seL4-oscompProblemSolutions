@@ -1,0 +1,392 @@
+# traps.S
+
+## rv的内容
+
+这是内陷处理函数，riscv直接在架构下，arm和x86各放在32和64位文件夹下。
+
+从官方手册没有找到整块的描述写traps.S的思路，打算看看代码。注释见仓库。
+
+[XV6 RISCV源码阅读报告之中断_HarunaP的博客-CSDN博客](https://blog.csdn.net/weixin_43912531/article/details/122138432)
+
+[RISC-V特权等级与Linux内核的启动 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/164394603)
+
+[RISC-V函数调用规范 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/462483036)
+
+[riscv 中断和异常处理 - tycoon3 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dream397/p/15687184.html)。
+
+[RISCV: Platform-Level Interrupt Controller(PLIC)_moonllz的博客-CSDN博客](https://blog.csdn.net/moonllz/article/details/52251788)。讲了riscv的local 中断和全局中断
+
+## 龙芯学习
+
+[STM8的线中断和端口中断_塘朗晨光的博客-CSDN博客_stm8引脚中断](https://blog.csdn.net/qq_38963607/article/details/83751304)。
+
+龙芯有3个入口，tlb例外和机器错误例外参考龙芯linux，普通例外暂时参考龙芯的traps.S。
+
+
+
+
+
+# seL4-rv的中断
+
+## initLocalIRQController
+
+开启了定时器中断和外部中断，软件中断因为smp未开启。
+
+
+
+## initIRQController
+
+![image-20220411094925357](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220411094925357.png)
+
+此处设置为了0，但是宏定义都是255？？？？
+
+plic，平台级中断控制器。
+
+
+
+## init_irq
+
+maxIRQ在src/arch/riscv/platform_gen.h.in
+
+cap_irq_control_cap_new的定义从cmake和Python生成
+
+
+
+# linux-龙芯中断
+
+init/main.c的start_kernel()
+
+```
+local_irq_disable();//关中断
+early_boot_irqs_disabled = true;
+...
+setup_arch(&command_line);//QT 设置三个中断入口
+|-cpu_probe();
+| |-per_cpu_trap_init();//内含很多中断设置
+| | |-setup_vint_size();//QT 设置ECFG寄存器的VS域
+| | |-configure_exception_vector();
+| | |-循环设置handler
+| | |-tlb_init();
+| | | |-setup_tlb_handler();
+...
+trap_init();//异常初始化
+...
+early_irq_init();//初始化中段描述符，设置一些缺省信息。与架构关系不大。
+init_IRQ();//异常初始化。在loongarch文件夹下
+...
+softirq_init();//软中断初始化，软中断->下半部不紧急的中断。软中断是分散初始化的，初始化位置见书68页。
+...
+early_boot_irqs_disabled = false;
+local_irq_enable();//开中断
+```
+
+local_irq_disable跳转到arch/loongarch/include/asm/irqflags.h
+
+```
+static inline void arch_local_irq_disable(void)
+{
+	u32 flags = 0;
+	__asm__ __volatile__(
+		"csrxchg %[val], %[mask], %[reg]\n\t"
+		: [val] "+r" (flags)
+		: [mask] "r" (CSR_CRMD_IE), [reg] "i" (LOONGARCH_CSR_CRMD)
+		: "memory");
+}
+```
+
+
+
+arch/loongarch/kernel/traps.c的trap_init()，见红书84
+
+
+
+关于外设中断：[early_irq_init_wuye110的博客-CSDN博客_early_irq_init](https://blog.csdn.net/wuye110/article/details/78556622)。
+
+[Linux 中断 —— GIC (数据结构 irq_domain/irq_desc/irq_data/irq_chip/irqaction)_爱洋葱的博客-CSDN博客_irq_desc](https://stephenzhou.blog.csdn.net/article/details/90648475?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_paycolumn_v3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1.pc_relevant_paycolumn_v3&utm_relevant_index=2)。
+
+
+
+
+
+
+
+# minikernel3
+
+![image-20220516102459230](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220516102459230.png)
+
+## 寄存器设置
+
+### ecfg 7.4节
+
+LIE配置使能。
+
+vs=0，则普通例外的入口相同，入口要在程序中写入eentry寄存器，看mini_kernel3例子：入口函数地址在链接脚本中页对齐，然后直接把该地址填入 eentry。
+
+### tcfg(定时器配置) 7.6节
+
+使能定时器
+
+循环模式
+
+### crmd 当前模式信息 7.4节
+
+先读出crmd，然后使能IE位，再写入crmd
+
+### era 例外程序返回地址7.4节
+
+### prmd 7.4节
+
+### estat 7.4
+
+## 流程
+
+### 中断准备
+
+设置好开启的中断，设置对应中断的寄存器，eentry信息。
+
+开启中断。
+
+### 中断触发时
+
+保护现场
+
+进入处理函数(era,prmd,ecfg,estat)
+
+### 恢复
+
+恢复现场
+
+中断返回
+
+
+
+# 视频课程学习
+
+多任务与上下文。
+
+一个核上，多个任务。多个任务的上下文要维护好，切换任务就要把上下文恢复。上下文在代码os.h中定义了结构体。
+
+![image-20220519144826433](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519144826433.png)
+
+![image-20220519150251246](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519150251246.png)
+
+ra是返回地址。每个任务定义一个上下文的结构体，存于内存中。mscratch当指针用，指明当前的上下文，实现上下文的切换。
+
+![image-20220519151521530](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519151521530.png)
+
+next指向下个上下文的地址。1f处，让scratch指向下个任务的上下文结构体（内存中）
+
+![image-20220519162451848](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519162451848.png)
+
+
+
+![image-20220519163537935](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519163537935.png)
+
+yield，主动放弃。max_tasks数组。
+
+![image-20220519190519938](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519190519938.png)
+
+
+
+![image-20220519192413813](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220519192413813.png)
+
+
+
+# seL4-riscv上下文切换
+
+kernel/include/arch/riscv/arch/machine/registerset.h 定义了用户上下文相关的寄存器，整个文件都需要改动。
+
+
+
+
+
+# linux-loongarch 上下文、上下文切换及返回
+
+arch/loongarch/kernel/ptrace.c的regoffset_table
+
+arch/loongarch/include/asm/ptrace.h的pt_regs
+
+![image-20220520143228664](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220520143228664.png)
+
+
+
+上下文有关的寄存器：
+
+![image-20220522171449667](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96-%E4%B8%8A%E4%B8%8B%E6%96%87.assets/image-20220522171449667.png)
+
+切换上下文的时候，会设置kernelsp。kernelsp指向了线程的私有内核栈。
+
+对于seL4，要设计某个寄存器或者变量，在切换线程的时候，指向这个线程要保存用户上下文的地址。对于linux，这个地址是kernelsp。
+
+
+
+同时
+
+![image-20220517222905823](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96.assets/image-20220517222905823.png)
+
+
+
+```
+cfi_ld	s0, PT_R23, \docfi//此处docfi=0，即
+
+LONG_L s0, sp, PT_R23
+cfi_restore s0 PT_R23 0//此话无用
+
+ld.d s0, sp, PT_R23
+```
+
+
+
+
+
+
+
+# seL4-loongarch中断与例外、上下文
+
+这部分工作主要参考linux-loongarch。
+
+TODO：
+
+改成统一入口。
+
+kernel/src/arch/loongarch/c_traps.c下的restore_user_context需要改。
+
+例外陷入需要改。
+
+中断处理需要改。
+
+## 配置例外入口，开启中断
+
+try_init_kernel函数中：
+
+* ~~关闭全局中断，清零CSR.CRMD.IE~~
+* ~~init_cpu函数中~~
+  * ~~setup_vint_size。参照linux，设置CSR.ECFG.VS=7。~~
+  * ~~setup_exception_vector。配置tlb例外、机器例外、普通例外入口地址寄存器。tlb重填例外的处理函数入口写入CSR.TLBRENTRY。机器例外入口设置成保留函数CSR.MERRENTRY。普通例外的处理函数入口写入CSR.EENTRY。普通例外的ecode见手册表7-8，其中1-7号例外与tlb相关，中断的ecode是中断号+64。~~
+  * ~~init_reserved_trap_handlers。设置例外处理函数为空函数。~~
+  * ~~init_tlb。初始化tlb并设置tlb相关的例外处理函数。~~
+  * ~~setup_normal_exception_handlers。设置普通例外的处理函数。~~
+  * ~~initLocalIRQController。清除局部中断，即清零CSR.ESTA。配置要开启的内部中断，写入CSR.ECFG。~~
+* ~~init_plat函数中~~
+  * ~~扩展io中断相关设置。暂时不打算实现。在seL4内核中，uart并未使用中断进行处理，我们按照seL4的文档结构，从dts中获取uart的物理地址，然后cmake文件调用python命令解析dts，并设置好uart的物理地址，上层的printf函数将以轮询的方式查询并输出uart消息。~~
+* ~~init_irqs函数中~~
+  * ~~提供给seL4的时间中断的中断号，并提供中断控制capability给rootCnode。~~
+* ~~使能全局中断。设置CSR.CRMD.IE。~~
+
+
+
+* 关闭全局中断，清零CSR.CRMD.IE
+* init_cpu函数中
+  * setup_vint_size。参照mini_kernel，设置CSR.ECFG.VS=0。
+  * setup_exception_vector。配置tlb例外、机器例外、普通例外入口地址寄存器。tlb重填例外的处理函数入口写入CSR.TLBRENTRY。机器例外入口设置成保留函数CSR.MERRENTRY。普通例外的处理函数入口写入CSR.EENTRY。普通例外的ecode见手册表7-8，其中1-7号例外与tlb相关，中断的ecode是中断号+64。
+  * ~~init_reserved_trap_handlers。设置例外处理函数为空函数。~~
+  * init_tlb。初始化tlb并设置tlbrefill处理函数，其余tlb相关的例外处理函数交给普通例外。
+  * ~~setup_normal_exception_handlers。设置普通例外的处理函数。~~
+  * initLocalIRQController。清除局部中断，即清零CSR.ESTA。配置要开启的内部中断，写入CSR.ECFG。
+* init_plat函数中
+  * 扩展io中断相关设置。暂时不打算实现。在seL4内核中，uart并未使用中断进行处理，我们按照seL4的文档结构，从dts中获取uart的物理地址，然后cmake文件调用python命令解析dts，并设置好uart的物理地址，上层的printf函数将以轮询的方式查询并输出uart消息。
+* init_irqs函数中
+  * 提供给seL4的时间中断的中断号，并提供中断控制capability给rootCnode。
+* 使能全局中断。设置CSR.CRMD.IE。？貌似Arch_initContext也会使能全局中断。
+
+
+
+
+
+
+
+kernel/src/arch/loongarch/platform_gen.h.in写了各中断枚举量。IRQConstants枚举量，方便seL4使用这些枚举量。
+
+
+
+
+
+
+
+
+
+
+
+## 处理与返回
+
+tlbex.S中定义了与tlb相关例外的处理函数入口。handle_tlb_refill使用linux-loongarch的处理函数。其它tlb例外的处理函数暂设置为保留函数，不作处理。
+
+genex.S中定义了其它例外的处理函数入口。暂设置为保留函数，不作处理。
+
+do_vint处理中断。
+
+中断和例外的返回在汇编中写好。
+
+
+
+保护现场：SAVE_ALL
+
+恢复现场：RESTORE_ALL_AND_RET
+
+
+
+**系统调用的era需要+4，其他例外不管。参考linux的arch/loongarch/kernel/syscall.c**
+
+k_tlbrentry也要对齐
+
+traps.S重写，检查estat寄存器的21:16位，如果其＞=64，则为中断；如果其==0xB，则为syscall，（参考linux的arch/loongarch/kernel/syscall.c），在enum syscall结构体中定义了很多syscall类型。a7是系统调用号，移入a2。
+
+
+
+
+
+
+
+## 修改seL4上下文相关
+
+修改kernel/include/arch/loongarch/arch/machine/registerset.h
+
+* 定义上下文。其中TLS表示：线程本地存储（Thread Local Storage）
+* 修改messageSizes结构体。其中n_msgRegisters，n_frameRegisters，n_frameRegisters见registerset.c。
+  * 对于n_exceptionMessage，等于seL4_UserException_Number，定义在kernel/libsel4/sel4_arch_include/loongarch64/sel4/sel4_arch/constants.h的seL4_UserException_Msg中的值=2。
+  * 对于n_syscallMessage，等于seL4_UnknownSyscall_Syscall，定义在kernel/libsel4/sel4_arch_include/loongarch64/sel4/sel4_arch/constants.h的seL4_UnknownSyscall_Msg中的值=10。
+  * 对于n_timeoutMessage，参考TIMEOUT_REPLY_MESSAGE的长度。
+    * 修改TIMEOUT_REPLY_MESSAGE，删去了gp，s10，s11，加上了t7，t8
+
+![image-20220520215455787](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96-%E4%B8%8A%E4%B8%8B%E6%96%87.assets/image-20220520215455787.png)
+
+* 增加fpu宏定义
+
+* 修改Arch_initContext，全局中断获取。在kernel/include/arch/loongarch/arch/machine/hardware.h定义CSR_PRMD_IE
+
+
+
+修改kernel/src/arch/loongarch/machine/registerset.c
+
+* frameRegisters删掉了gp，删掉了s10，s11。
+
+
+
+restore_user_context，该函数用于恢复现场。
+
+考虑用SAVE寄存器作为用户上下文的指针，可以看到linux里把它宏定义成KSCRATCH。
+
+
+
+head.S中设置根任务的LOONGARCH_CSR_KS0值为0
+
+
+
+
+
+
+
+
+
+
+
+拉取qemu，替换改动的文件，编译出debug版本。
+
+先连上kernel，target remote：1234。最后连上debug qemu，查看qemu的进程号，然后本地管理员gdb调试gdb，给qemu打上断点直接c，再回去运行kernel。
+
+![image-20220524165440518](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96-%E4%B8%8A%E4%B8%8B%E6%96%87.assets/image-20220524165440518.png)
+
+
+
+![image-20220524175513168](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96-%E4%B8%8A%E4%B8%8B%E6%96%87.assets/image-20220524175513168.png)
+
