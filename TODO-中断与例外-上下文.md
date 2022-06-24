@@ -370,23 +370,3 @@ restore_user_context，该函数用于恢复现场。
 
 head.S中设置根任务的LOONGARCH_CSR_KS0值为0
 
-
-
-
-
-
-
-
-
-
-
-拉取qemu，替换改动的文件，编译出debug版本。
-
-先连上kernel，target remote：1234。最后连上debug qemu，查看qemu的进程号，然后本地管理员gdb调试gdb，给qemu打上断点直接c，再回去运行kernel。
-
-![image-20220524165440518](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96-%E4%B8%8A%E4%B8%8B%E6%96%87.assets/image-20220524165440518.png)
-
-
-
-![image-20220524175513168](images/TODO-%E4%B8%AD%E6%96%AD%E4%B8%8E%E4%BE%8B%E5%A4%96-%E4%B8%8A%E4%B8%8B%E6%96%87.assets/image-20220524175513168.png)
-
