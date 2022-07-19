@@ -112,9 +112,21 @@ crt0.S
 
 
 
+# 7.13
+
+![image-20220713111643948](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220713111643948.png)
+
+"ld.d  $t1, $t0, 34*%[REGSIZE] 卡死
+
+没有进入过trap_entry。
+
+所以head.S中跳转到restore_user_context是不能执行的？该函数的上一步是什么？
 
 
 
+# 7.14
+
+修改traps.S，让riscv的内核能正常编译
 
 
 
