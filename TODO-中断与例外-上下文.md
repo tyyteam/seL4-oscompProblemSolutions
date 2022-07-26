@@ -14,7 +14,9 @@
 
 [riscv 中断和异常处理 - tycoon3 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dream397/p/15687184.html)。
 
-[RISCV: Platform-Level Interrupt Controller(PLIC)_moonllz的博客-CSDN博客](https://blog.csdn.net/moonllz/article/details/52251788)。讲了riscv的local 中断和全局中断
+[RISCV: Platform-Level Interrupt Controller(PLIC)_moonllz的博客-CSDN博客](https://blog.csdn.net/moonllz/article/details/52251788)。讲了riscv的local 中断和全局中断。
+
+[riscv的外部中断和内部中断](https://www.w3cjava.com/technical-articles/RISC-V/125579737.html)。
 
 ## 龙芯学习
 

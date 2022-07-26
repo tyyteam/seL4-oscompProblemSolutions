@@ -132,9 +132,44 @@ crt0.S
 
 
 
+# 7.25
+
+用户程序起点的打断点位置：_sel4_start
+
+【未解决】停到了__sel4runtime_load_env的264行，qemu开启-d int,mmu打印
+
+* 在__sel4runtime_run_constructors的0x120010284卡死，报excode=0x1
+  * gdb调试qemu路径，tlbfill
+* 在12000eff0的位置就开始报错，但是没有进入traps.S?
+  * 内核或者qemu有问题
+  * 用户程序就这样设计的？
+  * gdb调试qemu
+
+在syscall上找思路
+
+![image-20220725173316399](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220725173316399.png)
+
+* debug_printKernelEntryReason进入Entry_UnknownSyscall的情况。
+* handleUserLevelFault。
+
+最后发现是crt的问题
+
+# 7.26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 asm volatile语法
 
 ![image-20220502112337320](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220502112337320.png)
-
-
-

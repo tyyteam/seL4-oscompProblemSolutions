@@ -71,6 +71,16 @@ layout src 切换到源程序视图调试
 
 
 
+# 添加符号文件
+
+add-symbol-file [filename]
+
+
+
+qemu参数
+
+-d mmu,int,... 在log.c中有选项可以查看
+
 
 
 
