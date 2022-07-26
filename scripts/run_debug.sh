@@ -19,8 +19,8 @@ Help()
 while getopts ":lrh" option; do
    case $option in
    	l)
-   	   gnome-terminal -t "gdb loongarch kernel" -- sh -c "echo port is 1122;loongarch64-unknown-linux-gnu-gdb ~/files/oscomp/sel4test/build_3A5000/kernel/kernel.elf -ex 'target remote:1122'; exec bash;"
-   	   gnome-terminal -t "qemu-loongarch64 simulator" -- sh -c "cd ~/office/qemu-loongarch-runenv/qemu-loongarch-runenv;bash run_loongarch.sh -k sel4test-driver-image-loongarch-3A5000 -x;exec bash;"
+   	   gnome-terminal -t "gdb loongarch kernel" -- sh -x -c "echo port is 1122;loongarch64-unknown-linux-gnu-gdb ~/files/oscomp/sel4test/build_3A5000/kernel/kernel.elf -ex 'target remote:1122' -ex 'add-symbol-file /home/lqt/files/oscomp/sel4test/build_3A5000/apps/sel4test-driver/sel4test-driver'; exec bash;"
+   	   gnome-terminal -t "qemu-loongarch64 simulator" -- sh -x -c "cd ~/office/qemu-loongarch-runenv/qemu-loongarch-runenv;bash run_loongarch.sh -k sel4test-driver-image-loongarch-3A5000 -x;exec bash;"
    	   ;;
    	r)
    	   gnome-terminal -t "gdb riscv kernel" -- sh -c "echo port is 1234;riscv64-unknown-linux-gnu-gdb ~/files/oscomp/sel4test/build_spike/kernel/kernel.elf -ex 'target remote:1234'; exec bash;"
