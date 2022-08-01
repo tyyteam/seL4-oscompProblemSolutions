@@ -154,11 +154,49 @@ crt0.S
 
 最后发现是crt的问题
 
-# 7.26
+# 7.28
+
+发现大量注释掉的地方
+
+kernel/src/arch/loongarch/object/objecttype.c下的Arch_decodeInvocation。
+
+被kernel/src/object/objecttype.c下的decodeInvocation调用。
+
+被kernel/src/api/syscall.c下的handleInvocation调用。
+
+![image-20220728160259759](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220728160259759.png)
 
 
 
+decodeCnodeInvocation中报错
 
+![image-20220728170349191](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220728170349191.png)
+
+
+
+在handleVMFaultEvent报错
+
+![image-20220728172300979](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220728172300979.png)
+
+![image-20220728221918072](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220728221918072.png)
+
+![image-20220728222151326](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220728222151326.png)
+
+![image-20220728222226366](images/TODO-%E6%94%B9bug%E8%AE%B0%E5%BD%95.assets/image-20220728222226366.png)
+
+调用栈：
+
+handleInvocation
+
+decodeInvocation
+
+从Arch_decodeInvocation进入
+
+decodeLOONGARCHMMUInvocation
+
+decodeLOONGARCHFrameInvocation label=32，case LOONGARCHPageMap
+
+kernel/include/arch/loongarch/arch/object/structures.h中PT_SIZE_BITS 改成14
 
 
 
