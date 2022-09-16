@@ -38,7 +38,7 @@ while getopts ":lrah" option; do
    	   exec bash;"
    	   gnome-terminal -t "qemu-system-loongarch64 simulator" \
    	   -- sh -x -c "cd ${QEMU_LA_RUNENV};\
-   	   bash run_loongarch.sh -k sel4test-driver-image-loongarch-3A5000 -x;\
+   	   bash run_loongarch.sh -k sel4test-driver-image-loongarch-3A5000 -x | tee ${SEL4_TEST}lalog.txt;\
    	   exec bash;"
    	   ;;
    	r)
@@ -55,7 +55,8 @@ while getopts ":lrah" option; do
    	   gnome-terminal -t "qemu-system-riscv64 simulator" \
    	   -- sh -c "cd build_spike/images;\
    	   set -x;\
-   	   qemu-system-riscv64 -machine spike -cpu rv64 -nographic -serial mon:stdio -m size=4095M -S -s -kernel sel4test-driver-image-riscv-spike -bios none;set +x;exec bash;"
+   	   qemu-system-riscv64 -machine spike -cpu rv64 -nographic -serial mon:stdio -m size=4095M -S -s -kernel sel4test-driver-image-riscv-spike -bios none | tee ${SEL4_TEST}rvlog.txt;set +x;\
+   	   exec bash;"
    	   ;;
    	a)
    	   gnome-terminal -t "gdb arm kernel with breakpoints: ./am.bp" \
