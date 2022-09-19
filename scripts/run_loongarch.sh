@@ -76,6 +76,7 @@ else
 #    GRAPHIC="-vga virtio -device virtio-keyboard-pci -device virtio-mouse-pci"
     GRAPHIC="-vga virtio -device qemu-xhci -device usb-kbd -device usb-mouse"
 fi
-
+# $QEMU -d int,mmu -m $MEM -smp $CPUS -bios $BIOS -kernel $KERNEL -initrd $INITRD -append "$CMDLINE" $GRAPHIC $DEBUG
 set -x
-$QEMU -d int,mmu -m $MEM -smp $CPUS -bios $BIOS -kernel $KERNEL -initrd $INITRD -append "$CMDLINE" $GRAPHIC $DEBUG
+# $QEMU -d int -m $MEM -smp $CPUS -bios $BIOS -kernel $KERNEL -initrd $INITRD -append "$CMDLINE" $GRAPHIC $DEBUG
+$QEMU -m $MEM -smp $CPUS -bios $BIOS -kernel $KERNEL -initrd $INITRD -append "$CMDLINE" $GRAPHIC $DEBUG
