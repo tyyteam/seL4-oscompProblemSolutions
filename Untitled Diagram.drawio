@@ -1,98 +1,335 @@
-<mxfile host="app.diagrams.net" modified="2022-10-10T10:54:42.248Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="p4wSTw2UJlPjSFnccI5H" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-11T07:39:28.669Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="uCUdCTM8QOHyksJxCzFE" version="20.4.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1541" dy="996" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3042" dy="1649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-1" value="init-build.sh" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-1" value="init-build.sh" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="70" y="620" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-2" value="camkes-vm/projects/vm-examples/CMakeLists.txt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-2" value="camkes-vm/projects/vm-examples/CMakeLists.txt" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="254" y="615" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-1" target="rtuSLKHqq32bRLiLEJmx-2">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-1" target="rtuSLKHqq32bRLiLEJmx-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="280" y="850" as="sourcePoint" />
             <mxPoint x="330" y="800" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-4" value="include同级下的settings.cmake" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="430" y="520" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-4" value="include同级下的settings.cmake" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="430" y="560" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-5" value="project(camkes-vm C CXX ASM)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-5" value="project(camkes-vm C CXX ASM)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="430" y="1169" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-6" value="find_package(&lt;b&gt;camkes-arm-vm&lt;/b&gt; REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="440" y="1309" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-6" value="find_package(&lt;b&gt;camkes-arm-vm&lt;/b&gt; REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="430" y="1250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-7" value="camkes_arm_vm_setup_arm_vm_environment()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="440" y="1389" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-7" value="camkes_arm_vm_setup_arm_vm_environment()" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="430" y="1420" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-8" value="add_subdirectory(&quot;apps/${AppArch}/${CAMKES_VM_APP}&quot;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="460" y="1479" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-8" value="add_subdirectory(&quot;apps/${AppArch}/${CAMKES_VM_APP}&quot;)&lt;br&gt;即projects/vm-examples/apps/Arm/vm_minimal" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="430" y="2668" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-9" value="GenerateCAmkESRootserver()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="440" y="1589" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-9" value="GenerateCAmkESRootserver()&lt;br&gt;来自camkes.cmake&lt;br&gt;最终生成camkes rootserver" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="430" y="2800" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-10" value="设置&lt;b&gt;AppArch&lt;/b&gt; “Arm”" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-10" value="设置&lt;b&gt;AppArch&lt;/b&gt; “Arm”" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="707" y="30" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-11" value="设置&lt;b&gt;CAMKES_ARM_LINUX_DIR&lt;br&gt;project_dir&lt;br&gt;project_module&lt;/b&gt;&amp;nbsp;${project_dir}/projects/*&lt;br&gt;&lt;b&gt;CMAKE_MODULE_PATH&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;${project_dir}/kernel&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ${project_dir}/tools/seL4/cmake-tool/helpers/&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ${project_dir}/tools/seL4/elfloader-tool/&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ${project_modules}&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;SEL4_CONFIG_DEFAULT_ADVANCED &lt;/b&gt;ON&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;CAMKES_CONFIG_DEFAULT_ADVANCED &lt;/b&gt;ON&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-11" value="设置&lt;b&gt;CAMKES_ARM_LINUX_DIR&lt;br&gt;project_dir&lt;br&gt;project_module&lt;/b&gt;&amp;nbsp;${project_dir}/projects/*&lt;br&gt;&lt;b&gt;CMAKE_MODULE_PATH&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;${project_dir}/kernel&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ${project_dir}/tools/seL4/cmake-tool/helpers/&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ${project_dir}/tools/seL4/elfloader-tool/&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ${project_modules}&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;SEL4_CONFIG_DEFAULT_ADVANCED &lt;/b&gt;ON&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;CAMKES_CONFIG_DEFAULT_ADVANCED &lt;/b&gt;ON&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="630" y="100" width="283" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-12" value="&lt;b&gt;include&lt;/b&gt;&lt;br&gt;&lt;div&gt;(camkes-vm/tools/seL4/cmake-tool/helpers/application_settings.cmake&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-12" value="&lt;b&gt;include&lt;/b&gt;&lt;br&gt;&lt;div&gt;(camkes-vm/tools/seL4/cmake-tool/helpers/application_settings.cmake&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="707" y="310" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-13" value="这里是几个函数&lt;br&gt;ApplyData61ElfLoaderSettings&lt;br&gt;ApplyCommonSimulationSettings&lt;br&gt;ApplyCommonReleaseVerificationSettings、&lt;br&gt;correct_platform_strings&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-13" value="这里是几个函数&lt;br&gt;ApplyData61ElfLoaderSettings&lt;br&gt;ApplyCommonSimulationSettings&lt;br&gt;ApplyCommonReleaseVerificationSettings、&lt;br&gt;correct_platform_strings&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="923" y="310" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-15" value="&lt;b&gt;include&lt;/b&gt;&lt;br&gt;&lt;div&gt;同级下的easy-settings.cmake&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-15" value="&lt;b&gt;include&lt;/b&gt;&lt;br&gt;&lt;div&gt;同级下的easy-settings.cmake&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="707" y="390" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-16" value="&lt;b&gt;set&lt;/b&gt;&lt;br&gt;&lt;b&gt;RELEASE&lt;/b&gt; OFF" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-16" value="&lt;b&gt;set&lt;/b&gt;&lt;br&gt;&lt;b&gt;RELEASE&lt;/b&gt; OFF" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="923" y="390" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-17" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-15" target="rtuSLKHqq32bRLiLEJmx-16">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-17" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-15" target="rtuSLKHqq32bRLiLEJmx-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="850" y="460" as="sourcePoint" />
             <mxPoint x="900" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-18" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-12" target="rtuSLKHqq32bRLiLEJmx-13">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-18" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-12" target="rtuSLKHqq32bRLiLEJmx-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="890" y="570" as="sourcePoint" />
             <mxPoint x="940" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-19" value="&lt;b&gt;set&lt;br&gt;KernelArch&lt;br&gt;KernelSel4Arch&lt;br&gt;KernelArmHypervisorSupport&lt;br&gt;KernelRootCNodeSizeBits&lt;br&gt;KernelArmVtimerUpdateVOffset&lt;br&gt;KernelArmDisableWFIWFETraps&lt;br&gt;CapDLLoaderMaxObjects&lt;br&gt;CAmkESCPP&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-19" value="&lt;b&gt;set&lt;br&gt;KernelArch&lt;br&gt;KernelSel4Arch&lt;br&gt;KernelArmHypervisorSupport&lt;br&gt;KernelRootCNodeSizeBits&lt;br&gt;KernelArmVtimerUpdateVOffset&lt;br&gt;KernelArmDisableWFIWFETraps&lt;br&gt;CapDLLoaderMaxObjects&lt;br&gt;CAmkESCPP&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="670" y="460" width="193" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-20" value="调用ApplyCommonReleaseVerificationSettings&lt;br&gt;设置了一些变量" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-20" value="调用ApplyCommonReleaseVerificationSettings&lt;br&gt;设置了一些变量" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="712" y="600" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-21" value="include(&quot;projects/vm-examples/apps/Arm/vm_minimal/settings.cmake&quot;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-21" value="include(&quot;projects/vm-examples/apps/Arm/vm_minimal/settings.cmake&quot;)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="712" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-23" value="定义了一些变量&lt;br&gt;例如tk1：&lt;br&gt;&lt;b&gt;KernelTk1SMMU&lt;br&gt;KernelTk1SMMUInterruptEnable&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-23" value="定义了一些变量&lt;br&gt;例如tk1：&lt;br&gt;&lt;b&gt;KernelTk1SMMU&lt;br&gt;KernelTk1SMMUInterruptEnable&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="923" y="670" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-24" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-21" target="rtuSLKHqq32bRLiLEJmx-23">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-24" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-21" target="rtuSLKHqq32bRLiLEJmx-23" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1020" y="850" as="sourcePoint" />
             <mxPoint x="1070" y="800" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-25" value="调用&lt;br&gt;correct_platform_strings()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-25" value="调用&lt;br&gt;correct_platform_strings()" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="712" y="740" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-26" value="find_package(seL4 REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-26" value="find_package(seL4 REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="712" y="810" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-27" value="调用&lt;br&gt;sel4_configure_platform_settings()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="712" y="880" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-27" value="调用&lt;br&gt;sel4_configure_platform_settings()&lt;br&gt;include(${KERNEL_CONFIG_PATH})" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="711.5" y="930" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rtuSLKHqq32bRLiLEJmx-28" value="调用&lt;br&gt;ApplyData61ElfLoaderSettings" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="712" y="950" width="120" height="60" as="geometry" />
+        <mxCell id="rtuSLKHqq32bRLiLEJmx-28" value="根据KernelARMPlatform和KernelSel4Arch调用ApplyData61ElfLoaderSettings，设置elfloader的相关参数" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="711.5" y="1020" width="118" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-0" value="定义&lt;br&gt;&lt;b&gt;KernelSel4Arch &lt;/b&gt;aarch64&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="923" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-1" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-25" target="kBXimnSuywa1gsr7dqCJ-0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="822" y="760" as="sourcePoint" />
+            <mxPoint x="913" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-2" value="kernel/FindseL4.cmake" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="923" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-3" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-26" target="kBXimnSuywa1gsr7dqCJ-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="940" as="sourcePoint" />
+            <mxPoint x="1010" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-4" value="定义&lt;br&gt;&lt;b&gt;KERNEL_PATH &lt;/b&gt;kernel&lt;br&gt;&lt;b&gt;KERNEL_HELPERS_PATH &lt;/b&gt;kernel/tools/helpers.cmake&lt;br&gt;&lt;b&gt;KERNEL_CONFIG_PATH &lt;/b&gt;kernel/configs/seL4Config.cmake&lt;br&gt;宏&lt;br&gt;&lt;b&gt;sel4_import_kernel&lt;br&gt;sel4_import_libsel4&lt;br&gt;sel4_configure_platform_settings&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1110" y="775" width="350" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-5" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-2" target="kBXimnSuywa1gsr7dqCJ-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="990" as="sourcePoint" />
+            <mxPoint x="1080" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="863" y="930" as="sourcePoint" />
+            <mxPoint x="1080" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-7" value="kernel/configs/seL4Config.cmake&lt;br&gt;内核相关不再赘述&lt;br&gt;详情https://raw.githubusercontent.com/GooTal/picBed/master/myPics/cmake1.png" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1030" y="930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-8" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-27" target="kBXimnSuywa1gsr7dqCJ-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1020" y="1090" as="sourcePoint" />
+            <mxPoint x="1070" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-10" value="设置KernelMaxNumNodes" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="707" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-11" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="570" y="40" width="20" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-12" value="find_package MODULE模式搜索路径依次为：&lt;br&gt;1.CMAKE_MODULE_PATH&lt;br&gt;2.CMAKE_ROOT 即&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;color: rgb(77, 77, 77); font-family: -apple-system, &amp;quot;SF UI Text&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;WenQuanYi Micro Hei&amp;quot;, sans-serif; font-variant-ligatures: no-common-ligatures; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;CMake安装目录（即&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; outline: 0px; font-weight: 700; overflow-wrap: break-word; color: rgb(77, 77, 77); font-family: -apple-system, &amp;quot;SF UI Text&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;WenQuanYi Micro Hei&amp;quot;, sans-serif; font-variant-ligatures: no-common-ligatures; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;CMAKE_ROOT&lt;/span&gt;&lt;span style=&quot;color: rgb(77, 77, 77); font-family: -apple-system, &amp;quot;SF UI Text&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;WenQuanYi Micro Hei&amp;quot;, sans-serif; font-variant-ligatures: no-common-ligatures; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;变量)下的&lt;/span&gt;&lt;span style=&quot;box-sizing: border-box; outline: 0px; font-weight: 700; overflow-wrap: break-word; color: rgb(77, 77, 77); font-family: -apple-system, &amp;quot;SF UI Text&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;WenQuanYi Micro Hei&amp;quot;, sans-serif; font-variant-ligatures: no-common-ligatures; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;Modules&lt;/span&gt;&lt;span style=&quot;color: rgb(77, 77, 77); font-family: -apple-system, &amp;quot;SF UI Text&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;WenQuanYi Micro Hei&amp;quot;, sans-serif; font-variant-ligatures: no-common-ligatures; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;目录下&lt;/span&gt;&lt;/font&gt;" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="120" y="120" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-13" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="160" as="sourcePoint" />
+            <mxPoint x="610" y="183" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-14" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-6" target="kBXimnSuywa1gsr7dqCJ-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="1330" as="sourcePoint" />
+            <mxPoint x="650" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-15" value="projects/vm/Findcamkes-arm-vm.cmake" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="1250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-16" value="定义&lt;br&gt;&lt;b&gt;CAMKES_ARM_VM_DIR&amp;nbsp;&lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}&lt;br&gt;&lt;b&gt;CAMKES_ARM_VM_HELPERS_PATH&amp;nbsp;&lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}/arm_vm_helpers.cmake&lt;br&gt;宏&lt;br&gt;&lt;b&gt;camkes_arm_vm_import_project&lt;br&gt;camkes_arm_vm_setup_arm_vm_environment&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1235" width="361" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-17" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-15" target="kBXimnSuywa1gsr7dqCJ-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="850" y="1410" as="sourcePoint" />
+            <mxPoint x="900" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="1410" as="sourcePoint" />
+            <mxPoint x="880" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-20" value="find_package(camkes-tool REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-21" value="find_package(global-components REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="1500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-22" value="find_package(camkes-vm REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="1595" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-23" value="find_package(sel4_projects_libs REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="1751" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-24" value="find_package(camkes-vm-images REQUIRED)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="1675" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-25" value="camkes_tool_setup_camkes_build_environment()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="2037.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-26" value="sel4_projects_libs_import_libraries()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="2285" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-27" value="global_components_import_project()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="2397" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-28" value="camkes_arm_vm_import_project()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="2507" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-29" value="projects/camkes-tool/Findcamkes-tool.cmake" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-30" value="projects/global-compoents/Findglobal-components.cmake" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-31" value="projects/vm/Findcamkes-vm.cmake" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1595" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-32" value="projects/camkes-vm-images/Findcamkes-vm-images.cmake" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1675" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-33" value="projects/seL4_projects_libs/Findsel4_projects_libs.cmake" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1751" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-34" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-20" target="kBXimnSuywa1gsr7dqCJ-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="1800" as="sourcePoint" />
+            <mxPoint x="320" y="1750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-35" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-21" target="kBXimnSuywa1gsr7dqCJ-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1130" y="1560" as="sourcePoint" />
+            <mxPoint x="1180" y="1510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-36" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-22" target="kBXimnSuywa1gsr7dqCJ-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1765" as="sourcePoint" />
+            <mxPoint x="440" y="1715" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-37" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-24" target="kBXimnSuywa1gsr7dqCJ-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="980" y="1875" as="sourcePoint" />
+            <mxPoint x="1030" y="1825" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-38" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-23" target="kBXimnSuywa1gsr7dqCJ-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="1921" as="sourcePoint" />
+            <mxPoint x="990" y="1871" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-39" value="CMakeLists.txt" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="2668" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-40" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="rtuSLKHqq32bRLiLEJmx-8" target="kBXimnSuywa1gsr7dqCJ-39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="2842" as="sourcePoint" />
+            <mxPoint x="710" y="2792" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-41" value="定义&lt;br&gt;&lt;b&gt;CAMKES_TOOL_DIR &lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}&lt;br&gt;&amp;nbsp;宏&lt;br&gt;&lt;b&gt;camkes_tool_import_libraries&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1110" y="1417.5" width="310" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-42" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-29" target="kBXimnSuywa1gsr7dqCJ-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1200" y="1560" as="sourcePoint" />
+            <mxPoint x="1250" y="1510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-43" value="定义&lt;br&gt;&lt;b&gt;GLOBAL_COMPONENTS_DIR&amp;nbsp;&lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}&lt;br&gt;&lt;b&gt;GLOBAL_COMPONENTS_PATH&lt;/b&gt;&amp;nbsp;${CMAKE_CURRENT_LIST_DIR}/global-components.cmake&lt;br&gt;&amp;nbsp;宏&lt;br&gt;&lt;b&gt;global_components_import_project: include(${GLOBAL_COMPONENTS_PATH})&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1110" y="1490" width="530" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-44" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-30" target="kBXimnSuywa1gsr7dqCJ-43">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1180" y="1670" as="sourcePoint" />
+            <mxPoint x="1230" y="1620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-45" value="定义&lt;br&gt;&lt;b&gt;CAMKES_VM_DIR&amp;nbsp;&lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}&lt;br&gt;&lt;b&gt;CAMKES_VM_HELPERS_PATH&lt;/b&gt;&amp;nbsp;${CMAKE_CURRENT_LIST_DIR}//camkes_vm_helpers.cmake&lt;br&gt;&lt;b&gt;CAMKES_VM_SETTINGS_PATH&lt;/b&gt;&amp;nbsp;${CMAKE_CURRENT_LIST_DIR}/camkes_vm_settings.cmake&lt;br&gt;&amp;nbsp;宏&lt;br&gt;&lt;b&gt;camkes_x86_vm_setup_x86_vm_environment&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1110" y="1580" width="540" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-47" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-31" target="kBXimnSuywa1gsr7dqCJ-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1150" y="1840" as="sourcePoint" />
+            <mxPoint x="1200" y="1790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-48" value="定义&lt;br&gt;&lt;b&gt;CAMKES_VM_IMAGES_DIR&amp;nbsp;&lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1110" y="1684" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-49" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-32" target="kBXimnSuywa1gsr7dqCJ-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1110" y="1814" as="sourcePoint" />
+            <mxPoint x="1160" y="1764" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-50" value="定义&lt;br&gt;&lt;b&gt;SEL4_PROJECTS_LIBS_DIR&amp;nbsp;&lt;/b&gt;${CMAKE_CURRENT_LIST_DIR}&lt;br&gt;函数&lt;br&gt;&lt;b&gt;sel4_projects_libs_import_libraries&lt;/b&gt;:&amp;nbsp;add_subdirectory(${SEL4_PROJECTS_LIBS_DIR} sel4_projects_libs)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1110" y="1741" width="530" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-51" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="kBXimnSuywa1gsr7dqCJ-33" target="kBXimnSuywa1gsr7dqCJ-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1130" y="1910" as="sourcePoint" />
+            <mxPoint x="1180" y="1860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-54" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(seL4 REQUIRED)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(elfloader-tool REQUIRED)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(musllibc REQUIRED)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(util_libs REQUIRED)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(seL4_libs REQUIRED)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(projects_libs REQUIRED)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; find_package(capdl REQUIRED)&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; sel4_import_kernel()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; elfloader_import_project()&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="1870" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-57" value="&lt;div&gt;add_subdirectory(libsel4vm)&lt;/div&gt;&lt;div&gt;add_subdirectory(libsel4vchan)&lt;/div&gt;&lt;div&gt;add_subdirectory(libsel4dma)&lt;/div&gt;&lt;div&gt;add_subdirectory(libsel4bga)&lt;/div&gt;&lt;div&gt;add_subdirectory(libsel4keyboard)&lt;/div&gt;&lt;div&gt;add_subdirectory(libsel4vmmplatsupport)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2275" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-59" value="include(${CAMKES_TOOL_DIR}/camkes.cmake)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2050" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-60" value="&lt;div&gt;musllibc_setup_build_environment_with_sel4runtime()&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; sel4_import_libsel4()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; util_libs_import_libraries()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; sel4_libs_import_libraries()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; projects_libs_import_libraries()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; camkes_tool_import_libraries()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; capdl_import_project()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;以上几个import实际上就是add_subdirectory&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2110" width="290" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-61" value="很多camkes的函数，例如&lt;b&gt;CAmkESAddImportPath&lt;br&gt;GenerateCAmkESRootserver&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1280" y="2037.5" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-62" value="一堆add_subdirectory和 include" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2397" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-63" value="这里包含一些camkes架构相关的内容" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2507" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-64" value="..." style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="2800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-65" value="include(${CAMKES_ARM_VM_HELPERS_PATH})" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kBXimnSuywa1gsr7dqCJ-66" value="针对不同平台设置相关变量" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="900" y="2700" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
